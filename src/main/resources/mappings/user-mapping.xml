@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mosic.biz.user.UserService">
+
+	<insert id="insertUser" parameterType="com.mosic.biz.user.domain.UserVO">
+		INSERT INTO USER (ID, PW, NAME, GENDER, MAIL, MOBILE, DEGREE)
+		VALUES(#{id},#{pw},#{name},#{gender},#{mail},#{mobile},#{degree})
+	</insert>
+
+	<delete id="deleteUser" parameterType="com.mosic.biz.user.domain.UserVO">
+		DELETE FROM USER WHERE
+		ID = #{id}
+	</delete>
+
+	<update id="updateUser" parameterType="com.mosic.biz.user.domain.UserVO">
+		UPDATE USER
+		SET
+			PW = #{pw}
+			MAIL = #{mail}
+			MOBILE = #{mobile}
+		WHERE ID = #{id}
+	</update>
+
+	<select id="getUser" parameterType="com.mosic.biz.user.domain.UserVO" resultType="com.mosic.biz.user.domain.UserVO">
+		SELECT *
+		FROM USER
+		WHERE ID = #{id}
+	</select>
+
+	<resultMap type="com.mosic.biz.user.domain.UserVO" id="userResult">
+		<id property="id" column="ID" />
+		<result property="pw" column="PW" />
+		<result property="name" column="NAME" />
+		<result property="gender" column="GENDER" />
+		<result property="mail" column="MAIL" />
+		<result property="mobile" column="MOBILE" />
+		<result property="degree" column="DEGREE" />
+	</resultMap>
+
+	<select id="getAllUser" resultMap="userResult">
+		SELECT * FROM USER
+		WHERE ID = #{id}
+	</select>
+
+</mapper>

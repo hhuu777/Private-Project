@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mosic.biz.album.AlbumService">
+
+	<insert id="insertAlbum" parameterType="com.mosic.biz.album.domain.AlbumVO">
+		INSERT INTO ALBUM (ID, TRACKNAME, TRACKSRC, ARTIST, ISTITLE)
+		VALUES(#{id},#{trackName},#{trackSrc},#{artist},#{isTitle})
+	</insert>
+
+	<delete id="deleteAlbum" parameterType="com.mosic.biz.album.domain.AlbumVO">
+		DELETE FROM ALBUM WHERE
+		TRACKNUM = #{trackNum}
+	</delete>
+
+	<update id="updateAlbum" parameterType="com.mosic.biz.album.domain.AlbumVO">
+		UPDATE ALBUM
+		SET
+			TRACKNAME = #{trackName},
+			TRACKSRC = #{trackSrc},
+			ISTITLE = #{isTitle}
+		WHERE TRACKNUM = #{trackNum}
+	</update>
+
+	<select id="getAlbumById" resultType="com.mosic.biz.album.domain.AlbumVO">
+		SELECT *
+		FROM ALBUM
+		WHERE ID = 0
+	</select>
+	
+	<select id="getAlbumByArtist" resultType="com.mosic.biz.album.domain.AlbumVO">
+		SELECT *
+		FROM ALBUM
+		WHERE ARTIST = #{artist}
+	</select>
+
+	<resultMap type="com.mosic.biz.album.domain.AlbumVO" id="albumResult">
+		<id property="id" column="ID" />
+		<result property="trackNum" column="TRACKNUM" />
+		<result property="trackName" column="TRACKNAME" />
+		<result property="trackSrc" column="TRACKSRC" />
+		<result property="isTitle" column="ISTITLE" />
+		<result property="artist" column="ARTIST" />
+	</resultMap>
+
+	<select id="getAllAlbum" resultMap="albumResult">
+		SELECT * FROM ALBUM
+	</select>
+
+</mapper>
