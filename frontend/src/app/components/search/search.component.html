@@ -1,0 +1,31 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+<div class="navbar navbar-default navbar-fixed-top">
+    <form name="searchForm" class="navbar-form navbar-left" role="search">
+        <a class="logo" href="#">Mosic</a>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text"
+                       class="form-control"
+                       size="40"
+                       placeholder="노래, 앨범, 가수로 검색"
+                       aria-describedby="basic-addon2" #search>
+                <span class="input-group-addon" id="basic-addon2">
+                    <div class="glyphicon glyphicon-search" (click)="filterBySearch()"></div>
+                </span>
+            </div>    
+        </div>
+    </form>
+    <ul class="nav nav-tabs">
+        <li role="presentation">
+            <a [routerLink]="['/top100']"><span class="glyphicon glyphicon-signal"> TOP100</span></a>
+        </li>
+        <li role="presentation">
+            <a [routerLink]="['/genre']"><span class="glyphicon glyphicon-cd"> 장르</span></a>
+        </li>
+        <li role="presentation">
+            <a [routerLink]="['/recommend']"><span class="glyphicon glyphicon-user"> 1:1 문의</span></a>
+        </li>
+    </ul>    
+</div>

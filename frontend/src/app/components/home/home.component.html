@@ -1,0 +1,18 @@
+<div class="row carousel-holder">
+	<div class="col-md-12">
+		<app-carousel></app-carousel>
+	</div>
+</div>
+<div class="row">
+	<ul class="nav nav-pills">
+		<li role="presentation"><button class="btn" (click)="allMusicList()">전체</button></li>
+		<li role="presentation"><button class="btn" (click)="koreanMusicList()">국내</button></li>
+		<li role="presentation"><button class="btn" (click)="abroadMusicList()">해외</button></li>
+	</ul>
+<div class="container">
+	<div class="row">
+		<div *ngFor="let music of musics" class="col-sm-3 col-lg-3 col-md-3">
+			<app-music-item [music]="music"></app-music-item>
+		</div>
+	</div>
+</div>

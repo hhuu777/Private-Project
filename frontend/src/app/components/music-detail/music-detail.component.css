@@ -1,0 +1,106 @@
+.content_padding {
+    padding-left: 30px;
+}
+
+.sectionPadding {
+    padding-left: 20px;
+}
+
+.innerContainer {
+    position: relative;
+}
+
+.td_list {
+    width: 80px;
+}
+
+.td_list_artist {
+    width: 500px;
+}
+
+.td_album_art {
+    padding-left: 30px;
+    width: 300px;
+}
+
+.tr_height {
+    height: 50px;
+}
+
+.like_thumb {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.glyphicon-heart {
+    color : red;
+}
+
+.write_comment {
+    border: 1px solid black;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.glyphicon {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.tbFontStyle {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.service_nav {
+    margin-bottom: -1px;
+    padding: 0px;
+}
+
+.checkTrack {
+    width:20px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.title_tag {
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.num {
+    width: 50px;
+    text-align: center;
+}
+
+.music {
+    width: 450px;
+}
+
+.artist {
+    width: 250px;
+}
+
+.play {
+    width: 50px;
+    text-align: center;
+}
+
+.addList {
+    width: 50px;
+    text-align: center;
+}
+
+.addAlbum {
+    width: 50px;
+    text-align: center;
+}
+
+.download {
+    width: 50px;
+    text-align: center;
+}

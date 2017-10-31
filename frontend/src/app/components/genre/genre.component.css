@@ -1,0 +1,21 @@
+.navbar-fixed-left {
+    margin: 30px;
+}
+
+.genreList {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.genreListDetail {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.nav-tabs {
+    margin-top: 50px;
+}

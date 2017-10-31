@@ -1,0 +1,82 @@
+<div class="content_padding">
+    <h1>{{ music.artist }}</h1>
+    <hr>
+    <div class="row">
+    <table class="col-lg-8">
+        <tr>
+            <td rowspan="5" class="td_album_art"><img src="http://placehold.it/250x230"></td>
+        </tr>
+        <tr>
+            <td class="td_list">유형</td>
+            <td class="td_list_artist"></td>
+        </tr>
+        <tr>
+            <td class="td_list">스타일</td>
+            <td>{{ music.categories }}
+        </tr>
+        <tr><td></td></tr>
+    </table>
+    <table class="col-lg-2">
+        <tr>
+            <td colspan="5">
+                <button class="like_thumb">
+                    <div class="glyphicon glyphicon-heart">좋아요</div> {{music.thumb}}
+                </button>
+            </td>
+        </tr>
+        <tr class="tr_height">
+            <td colspan="2">한마디</td>
+            <td>0개</td>
+            <td><div class="write_comment">쓰기</div></td>
+        </tr>
+    </table>
+    </div>
+    <hr>
+    <h1>앨범</h1>
+    <div class="row">
+        <div *ngFor="let artAlbum of artistAlbum" class="col-sm-2 col-lg-2 col-md-2">
+            <app-music-item [music]="artAlbum"></app-music-item>
+        </div>
+    </div>
+    <hr>
+    <h1>곡</h1>
+    <app-chart-album-layout></app-chart-album-layout>
+    <div *ngFor="let artMusic of artistMusic">
+        <table class="table service_nav">
+                <tr>
+                    <td class="checkTrack">
+                        <input type="checkbox" id="musicCheck">
+                    </td>
+                    <td class="num tbFontStyle">
+                        {{artMusic.musicNum}}
+                        <br>
+                        <div class="title_tag" *ngIf="artMusic.title">
+                            title
+                        </div>
+                    </td>
+                    <td class="music tbFontStyle">
+                    {{artMusic.musicName}}
+                    </td>
+                    <td class="artist tbFontStyle">
+                        <a [routerLink]="['/artist', music.artist]">{{artMusic.artist}}</a>
+                    </td>
+                    <td class="play tbFontStyle">
+                        <div class="glyphicon glyphicon-play"></div>
+                    </td>
+                    <td class="addList tbFontStyle">
+                        <div class="glyphicon glyphicon-list"></div>
+                    </td>
+                    <td class="addAlbum tbFontStyle">
+                        <div class="glyphicon glyphicon-music"></div>
+                    </td>
+                    <td class="download tbFontStyle">
+                        <div class="glyphicon glyphicon-download"></div>
+                    </td>
+                </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="well">
+        {{music.description}}
+    </div>
+</div>

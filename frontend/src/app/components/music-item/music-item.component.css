@@ -1,0 +1,31 @@
+.caption {
+	height : 110px;
+	overflow : hidden;
+}
+
+.caption h4 {
+	white-space : nowrap;
+}
+
+.thumbnail {
+	padding : 5px;
+}
+
+.thumbnail img {
+	width : 100%;
+}
+
+.thumbnail .caption-full {
+	padding : 9px;
+	color : #333;
+}
+
+.play-button {
+	font-size: 30px;
+}
+
+h6 :hover {
+	text-decoration: none;
+	color: red;
+	cursor: pointer;
+}

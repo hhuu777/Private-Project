@@ -1,0 +1,55 @@
+<nav class="navbar navbar-left navbar-fixed-left" role="navigation">
+	<ul class="nav">
+		<li>
+			<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#loginModal">
+				로그인 / 회원가입
+			</button>
+		</li>
+		<li>
+			<img src="http://placehold.it/230x200">
+		</li>
+	</ul>
+	<app-music-player></app-music-player>
+</nav>
+
+<!--modal-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="loginModalLabel">Mosic</h4>
+		</div>
+		<div class="modal-body" [ngSwitch]="loginOrJoin">
+			<ul class="nav nav-pills nav-stacked" *ngSwitchDefault>
+				<li role="presentation">
+					<button type="button" class="btn btn-default" (click)="login()">로그인</button>
+				</li>
+				<li role="presentation">
+					<button type="button" class="btn btn-default" (click)="join()">회원가입</button>
+				</li>
+			</ul>
+			<ul class="nav" *ngSwitchCase="'login'">
+				<form (ngSubmit)="onSubmit()">
+					<li>
+						<input type="text" class="login_area" name="id" placeholder="아이디를 입력하세요." ngModel #i="ngModel" [class.hasError]="i.invalid && i.touched" required>
+					</li>
+					<li>
+						<input type="password" class="login_area" name="pw" placeholder="비밀번호를 입력하세요." ngModel #p="ngModel" [class.hasError]="p.invalid && p.touched" required>
+					</li>
+					<li>
+						<button type="submit" class="btn btn-primary">로그인</button>
+					</li>
+					<li>
+						<a href="#" data-dismiss="modal">아이디 / 비밀번호 찾기</a> <a href="#" data-dismiss="modal">회원가입</a>
+					</li>
+				</form>
+			</ul>
+		</div>
+		<div class="modal-footer">
+		</div>
+	</div>
+</div>
+</div>
+
+

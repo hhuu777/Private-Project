@@ -1,0 +1,8 @@
+<div class="thumbnail">
+    <img src="http://placehold.it/200x180">
+    <div class="caption">
+        <h4><a [routerLink]="['/album', music.id]">{{ music.title }}</a></h4>
+        <h5><a [routerLink]="['/artist', music.artist]">{{ music.artist }}</a></h5>
+        <h6><span class="glyphicon glyphicon-play-circle play-button"></span></h6>
+    </div>
+</div>

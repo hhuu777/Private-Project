@@ -1,0 +1,63 @@
+.btnNav {
+    align-content: center;
+    justify-content: center;
+}
+
+.glyphicon {
+    font-size: 12px;
+    word-spacing: -5px;
+}
+
+.tbFontStyle {
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.checkTrack {
+    width:30px;
+}
+
+.albumArt {
+    width:70px;
+}
+
+.ranking {
+    width: 50px;
+    text-align: center;
+}
+
+.music {
+    width: 400px;
+}
+
+.musicInAlbum {
+    width: 550px;
+}
+
+.artist {
+    width: 150px;
+}
+
+.album {
+    width: 150px;
+}
+
+.play {
+    width: 50px;
+    text-align: center;
+}
+
+.addList {
+    width: 50px;
+    text-align: center;
+}
+
+.addAlbum {
+    width: 50px;
+    text-align: center;
+}
+
+.download {
+    width: 50px;
+    text-align: center;
+}

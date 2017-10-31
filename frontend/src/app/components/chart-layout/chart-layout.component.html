@@ -1,0 +1,32 @@
+<div class="btnNav">
+    <input id="checkChart" name="checkAllChart" type="checkbox" (click)="allCheck()"><!-- (click)이벤트 추가 -->
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"> 바로 듣기</span>
+    </button>
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"> 재생목록에 추가</span>
+    </button>
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"> 내 앨범에 담기</span>
+    </button>
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-save" aria-hidden="true"> 음악 다운받기</span>
+    </button>
+</div>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <td class="checkTrack"></td>
+            <td class="ranking tbFontStyle">순위</td>
+            <td class="albumArt"></td>
+            <td class="music tbFontStyle">곡</td>
+            <td class="artist tbFontStyle">아티스트</td>
+            <td class="album tbFontStyle">앨범</td>
+            <td class="play tbFontStyle">듣기</td>
+            <td class="addList tbFontStyle">재생목록</td>
+            <td class="addAlbum tbFontStyle">내앨범</td>
+            <td class="download tbFontStyle">다운</td>
+        </tr>
+    </thead>                
+</table>

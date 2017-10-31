@@ -1,0 +1,37 @@
+.navbar-fixed-left {
+    position: fixed;
+}
+
+.nav {
+    padding-left: 20px;
+}
+
+.btn-lg {
+    width: 230px;
+    margin: 20px auto;
+}
+
+.modal-content {
+    width: 400px;
+}
+
+.login_area {
+    width: 300px;
+    height: 30px;
+    margin: 5px auto;
+}
+
+ul li .btn-default {
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+ul li .btn-primary {
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+.hasError {
+    border: 1px solid red;
+}

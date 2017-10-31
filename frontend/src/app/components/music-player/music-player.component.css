@@ -1,0 +1,44 @@
+.audioSrc {
+    display: none;
+}
+
+.playerContainer {
+    padding-left: 10px;
+    width: 250px;
+}
+
+.glyphicon {
+    cursor: pointer;
+}
+
+input[type=range] {
+    width: 100px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+.musicPlayer {
+    text-align: center;
+}
+
+.music_control {
+    margin: 10px auto;
+    font-size : 25px;
+    letter-spacing: 20px;
+}
+
+.volume_control {
+    margin: 10px auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.onLoop {
+    color: red;
+}
+
+.playList {
+    border: 1px solid black;
+}

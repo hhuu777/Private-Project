@@ -1,0 +1,32 @@
+<table class="table">
+    <tr>
+        <td class="checkTrack">
+            <input type="checkbox" id="musicCheck" #check>
+        </td>
+        <td class="ranking tbFontStyle">{{music.rank}}</td>
+        <td class="albumArt">
+            <a [routerLink]="['/album', music.id]"><img src="http://placehold.it/60x60"></a>
+        </td>
+        <td class="music tbFontStyle">
+           {{music.title}}
+        </td>
+        <td class="artist tbFontStyle">
+            <a [routerLink]="['/artist', music.artist]">{{music.artist}}</a>
+        </td>
+        <td class="album tbFontStyle">
+            <a [routerLink]="['/album', music.id]">{{music.album}}</a>
+        </td>
+        <td class="play tbFontStyle">
+            <div class="glyphicon glyphicon-play"></div>
+        </td>
+        <td class="addList tbFontStyle">
+            <div class="glyphicon glyphicon-list"></div>
+        </td>
+        <td class="addAlbum tbFontStyle">
+            <div class="glyphicon glyphicon-music"></div>
+        </td>
+        <td class="download tbFontStyle">
+            <div class="glyphicon glyphicon-download"></div>
+        </td>
+    </tr>
+</table>

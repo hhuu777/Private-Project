@@ -1,0 +1,8 @@
+<section class="sectionPadding">
+    <div class="innerContainer">
+        <app-chart-layout (check)="allChecked($event)"></app-chart-layout>
+        <div *ngFor="let music of musics">
+             <app-music-item-chart [music]="music" [allCheck]="allCheck"></app-music-item-chart>
+        </div>
+    </div>
+</section>

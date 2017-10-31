@@ -1,0 +1,22 @@
+<nav class="navbar navbar-fixed-left" role="navigation" [ngSwitch]="genre">
+    <ul class="nav nav-pills">
+        <li class="genreList" (click)="changeGenreKo()">국내</li>
+        <li class="genreList" (click)="changeGenreAb()">해외</li>
+    </ul>
+    <ul class="nav nav-tabs" *ngSwitchCase="'ko'">
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'ballad']">발라드</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'dance']">댄스</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'koHiphop']">랩/힙합</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'koRnb']">알앤비</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'koRock']">록/메탈</a></li>
+    </ul>
+    <ul class="nav nav-tabs" *ngSwitchCase="'ab'">
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'pop']">팝</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'elec']">일렉트로니카</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'abHiphop']">랩/힙합</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'abRnb']">알앤비</a></li>
+        <li class="genreListDetail"><a [routerLink]="['./detail', 'abRock']">록/메탈</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+
